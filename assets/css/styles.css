@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.swipper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15rem auto;
+    width: 500px;
+}
+
+.swipper-in {
+    position: relative;
+    width: 500px;
+    height: 300px; 
+    overflow: hidden;
+}
+
+.swipper-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.swipper-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* L'élément actif */
+.swipper-item.active {
+    opacity: 1;
+    z-index: 1; 
+}
+
+.swipper-btn {
+    position: absolute;
+    top: 50%;
+    left: -2rem; 
+    right: -2rem; 
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Les boutons ne bloquent pas le clic sur l'image */
+}
+
+/* Style des boutons */
+.swipper-btn button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: none; 
+    font-size: 16px;
+    pointer-events: auto; /* Les boutons récupèrent les clics */
+}
+
+.swipper-btn button:hover {
+    opacity: 0.8;
+}
+
+.swipper-dot {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid rgb(129, 129, 129);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot-active{
+    background-color: black;
+}
