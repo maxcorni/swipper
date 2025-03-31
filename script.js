@@ -29,11 +29,6 @@ previousBtn.addEventListener('click', () => {
     setActiveSlide(prevIndex);
 });
 
-//Si currentIndex = 0, alors prevIndex = (0 - 1 + 4) % 4 = 3 (le dernier élément).
-//Si currentIndex = 1, alors prevIndex = (1 - 1 + 4) % 4 = 0 (l'élément suivant est le premier).
-//Si currentIndex = 2, alors prevIndex = (2 - 1 + 4) % 4 = 1 (l'élément suivant est le deuxième).
-//Si currentIndex = 3, alors prevIndex = (3 - 1 + 4) % 4 = 2 (l'élément suivant est le troisième).
-
 // Fonction pour changer l'image en cliquant sur un point
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
